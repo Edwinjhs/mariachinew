@@ -1,0 +1,233 @@
+*
+  font-family: 'Work Sans', sans-serif
+  z-index: -1
+  --swiper-navigation-color: #FDC20F
+  --swiper-pagination-color: rgb(255, 145, 0)
+
+.start
+  position: absolute
+  top: 0
+  width: 100%
+  background: black
+
+img
+  position: relative
+  width: 100%
+  margin: 0px
+  top: 0
+
+h1
+  padding: 20px 0
+  text-align: center
+  font-weight: 400
+  width: 100%
+  height: 100%
+  background-color: black
+  font-size: 40px
+  color: white
+
+.mySwiper
+  display: flex
+  text-align: center
+  margin: 10px
+  padding: 10px
+  position: relative
+  cursor: pointer
+  background: black
+  img
+    width: 280px
+    height: 280px
+    border-radius: 10px
+
+button
+  position: relative
+  width: 90%
+  margin: 5%
+  display: flex
+  justify-content: center
+  align-items: center
+  border-radius: 5px
+  background: #000206
+  font-family: 'Josefin Sans', sans-serif
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2)
+  overflow: hidden
+  cursor: pointer
+  border: none
+button::after
+  content: " "
+  width: 0%
+  height: 100%
+  background: #ffbf00
+  position: absolute
+  transition: all 0.4s ease-in-out
+  right: 0
+button
+  &:hover::after
+    right: auto
+    left: 0
+    width: 100%
+button span
+  box-shadow: 5px 5px 50px 1px rgba(255,191,0,1)
+  text-align: center
+  text-decoration: none
+  width: 100%
+  padding: 18px 25px
+  color: #fff
+  font-size: 25px
+  font-weight: bolder
+  letter-spacing: 0.1em
+  z-index: 20
+  transition: all 0.3s ease-in-out
+  text-transform: uppercase
+button
+  &:hover span
+    color: #011126
+    animation: scaleUp 0.3s ease-in-out
+@keyframes scaleUp
+  0%
+    transform: scale(1)
+
+  50%
+    transform: scale(0.95)
+
+  100%
+    transform: scale(1)
+
+.diferenciales
+  display: flex
+  justify-content: space-between
+  flex-flow: row wrap
+  padding: 40px 0
+  align-content: center
+  .icon-padding
+    padding: 10px
+    display: flex
+    text-align: center
+    .iconify
+      font-size: 100px
+      background: #FDC20F
+      border-radius: 50%
+      padding: 20px
+  h2
+    padding: 20px 10px
+    color: white
+    text-align: center
+
+.feedbacks
+  display: flex
+  justify-content: center
+.feedback-swiper
+  text-align: center
+.user
+  display: flex
+  flex-flow: row wrap
+  background: #ffffff00
+  padding: 20px
+  margin: 80px 200px
+  align-items: center
+  justify-content: center
+  border: 5px solid #055da957
+  border-radius: 25px
+  img
+    border-radius: 50%
+.costumer
+  display: flex
+  background: #ffffff00
+  align-items: center
+  justify-content: center
+  .iconify
+    display: flex
+    justify-content: space-around
+    background: white
+    font-size: 30px
+.user-info
+  background: #ffffff
+  margin: 15px
+  border-radius: 25px
+  padding: 15px
+  .stars
+    background: #ffffff00
+    .iconify
+      background: white
+      color: #FDC20F
+      font-size: 30px
+  h3
+    background: white
+    font-weight: 600
+  p
+    background: white
+    font-size: 25px
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 600px)
+  .icon-padding
+    display: flex
+    flex-flow: column-reverse wrap
+    text-align: center
+    .iconify
+      align-self: center
+
+@media screen and (max-width: 800px)
+  .title
+    font-size: 30px
+  .mySwiper
+    img
+      width: 145px
+      height: 145px
+  .user
+    padding: 30px
+    margin: 60px
+  .user-info
+    margin: 12px
+    padding: 12px
+    .stars
+      .iconify
+        font-size: 25px
+    h3
+      font-size: 25px
+      font-weight: 600
+    p
+      font-size: 20px
+
+
+@media screen and (max-width: 450px)
+  .title
+    font-size: 18px
+  .mySwiper
+    img
+      width: 95px
+      height: 95px
+  button span
+    font-size: 15px
+    text-transform: uppercase
+
+  .user
+    display: flex
+    padding: 20px
+    margin: 40px
+  .user-info
+    margin: 10px
+    padding: 10px
+    .stars
+      .iconify
+        font-size: 20px
+    h3
+      font-weight: 600
+      font-size: 20px
+    p
+      font-size: 14px
+
+  .diferenciales
+    h2
+      font-size: 20px

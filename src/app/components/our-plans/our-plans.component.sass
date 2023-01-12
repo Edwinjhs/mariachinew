@@ -1,0 +1,237 @@
+.start
+  position: absolute
+  top: 0
+  width: 100%
+  background: black
+.imgheader
+  position: relative
+  width: 100%
+  margin: 0px
+  top: 0
+
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  // @@@@@@@@@@@ PLANS CARD @@@@@@@@@@@@@@@
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+.container
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  padding: 20px
+
+.card
+  width: 230px
+  height: 365px
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+  position: relative
+  perspective: 1000px
+  transform: perspective(1000px) translateY(0)
+  transform-style: preserve-3d
+  transition: transform 0.8s ease-in-out
+  &.dark
+    background-color: #cca702
+    color: #fbfbfb
+    .purchase-button
+      border: 1px solid white
+  &.light
+    background-color: #fbfbfb
+    color: #272727
+    .purchase-button
+      border: 1px solid black
+.card-container
+  display: flex
+  flex-flow: row wrap
+  justify-content: center
+.card-wrapper
+  margin: 20px
+  &:hover
+    .card
+      transform: rotateY(179deg)
+      z-index: 2
+    .text-overlay
+      opacity: 0
+      transform-style: preserve-3d
+      z-index: 1
+    .purchase-button-container
+      opacity: 1
+.text-overlay
+  transform: perspective(1000px) translateY(0) translateZ(80px)
+  transition: transform 0.8s ease-in-out, opacity 1s ease
+  pointer-events: none
+  width: 100%
+  perspective: inherit
+  padding-top: 50px
+h1
+  color: #fff
+h2
+  font-size: 0.9rem
+  text-align: center
+  font-weight: 500
+.price
+  text-align: center
+  font-size: 1.8rem
+  font-weight: 900
+  margin: 20px
+.purchase-button-container
+  color: black
+  position: absolute
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  left: 0
+  top: 0
+  transform: perspective(1000px) rotateY(179deg) translateY(0) translateZ(80px)
+  opacity: 0
+  z-index: -1
+  transition: transform 0.8s ease-in-out, opacity 1s ease
+  width: 100%
+  height: 100%
+.purchase-button
+  padding: 10px 40px
+  border-radius: 50px
+  font-size: 1.2rem
+  transition: background-color 0.25s ease, color 0.25s ease
+  cursor: pointer
+  &.light
+    &:hover
+      background-color: black
+      color: #fbfbfb
+  &.dark
+    &:hover
+      background-color: white
+      color: #272727
+.details-text
+  margin-top: 20px
+  display: flex
+  gap: 10px 10px
+  align-items: center
+  text-align: center
+  flex-direction: column
+  color: #858585
+  font-size: 0.75rem
+.details-text2
+  margin-top: 20px
+  display: flex
+  gap: 10px 10px
+  align-items: center
+  text-align: center
+  flex-direction: column
+  color: #0a0909
+  font-size: 0.75rem
+.iconify
+  color: black
+  font-size: 3rem
+  margin-bottom: 2rem
+
+.back-h2
+  color: #cca702
+  font-size: 2rem
+  margin-top: 0
+.back-h22
+  color: black
+  font-size: 2rem
+  margin-top: 0
+
+hr
+  border: 1px dashed #cca702
+  // END CARD
+
+  // PRODUCTS START
+.products
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  padding: 10px 0 0 0
+.containerproducts
+  margin: 0 30px
+  width: 100%
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-flow: row wrap
+  padding: 15px
+  justify-content: space-around
+  .card
+    background: #000000
+    margin: 20px
+    width: 301px
+    position: relative
+    cursor: pointer
+    align-items: center
+    text-align: center
+    border-radius: 20px
+    .face
+      border-radius: 20px
+      width: 300px
+      height: 320px
+      transition: 0.5s
+      &.face1
+        position: relative
+        background: #cca702
+        display: flex
+        justify-content: center
+        align-items: center
+        z-index: 1
+        transform: translateY(80px)
+        .content2
+          display: flex
+          flex-direction: column
+          align-items: center
+          justify-content: center
+          text-align: center
+          opacity: 1
+          transition: 0.5s
+          img
+            max-width: 200px
+            max-height: 200px
+            border-radius: 50%
+          h3
+            margin: 5px 0 0
+            padding: 0
+            color: #fff
+            text-align: center
+            font-size: 1.5em
+      &.face2
+        position: relative
+        background: #fff
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0px
+        margin: 0px
+        box-sizing: border-box
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8)
+        transform: translateY(-100px)
+
+        .content2
+
+          p
+            margin: 0
+            padding: 0
+          a
+            margin: 15px 0 0
+            display: inline-block
+            text-decoration: none
+            font-weight: 900
+            color: #333
+            padding: 5px
+            border: 1px solid #333
+            &:hover
+              background: #cca702
+              color: black
+    &:hover
+      .face
+        &.face1
+          background: #000000
+          transform: translateY(0)
+          .content2
+            opacity: 1
+        &.face2
+          transform: translateY(0)
+
+
+  // PRODUCTS END

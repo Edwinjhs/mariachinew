@@ -1,0 +1,32 @@
+<div class="completeGalery">
+  <img src="assets/img/imgGalery.jpg" alt="">
+  <p>Conoce mas de nuestro trabajo</p>
+  <h1 class="title">VIDEOS</h1>
+  `<swiper
+    [slidesPerView]="3"
+    [spaceBetween]="30"
+    [freeMode]="true"
+    [loop]="true"
+[navigation]="true"
+    [pagination]="{
+      clickable: true
+    }"
+    class="mySwiper">
+    <ng-template swiperSlide *ngFor="let video of videos"> <video [src]="video.video" controls preload="auto"></video> </ng-template>
+  </swiper>`,
+
+  <h1 class="title">IMAGENES</h1>
+  `<swiper
+    [slidesPerView]="3"
+    [spaceBetween]="30"
+    [freeMode]="true"
+    [loop]="true"
+[navigation]="true"
+    [pagination]="{
+      clickable: true
+    }"
+    class="mySwiper">
+    <ng-template swiperSlide *ngFor="let imagen of imagenes"> <img [src]="imagen.img" controls preload="metadata" ></ng-template>
+  </swiper>`,
+<app-footer></app-footer>
+</div>

@@ -1,0 +1,88 @@
+<section class="start">
+  <img class="imgheader" src="../../../assets/img/product.JPG" alt="" />
+  <!-- CARD START -->
+  <div class="container">
+    <h1>PLANES</h1>
+    <div class="card-container">
+      <div class="card-wrapper">
+        <div class="card light">
+          <div class="text-overlay">
+            <h2>BASICO</h2>
+            <div class="price">$80.000</div>
+            <div class="details-text">
+              <span>7 CANCIONES</span>
+              <span>Up to 10 projects</span>
+              <span>24/7 support</span>
+            </div>
+          </div>
+          <div class="purchase-button-container">
+            <h2 class="back-h2">BASICO</h2>
+            <span class="iconify" data-icon="fxemoji:guitar"></span>            <div class="purchase-button light">LO QUIERO</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card dark">
+          <div class="text-overlay">
+            <h2>ESTANDAR</h2>
+            <div class="price">$120.000</div>
+            <div class="details-text2">
+              <span>30 MINUTOS</span>
+              <span>Up to 50 projects</span>
+              <span>24/7 support</span>
+            </div>
+          </div>
+          <div class="purchase-button-container">
+            <h2 class="back-h22">ESTANDAR</h2>
+            <span class="iconify" data-icon="emojione:guitar"></span>
+            <div class="purchase-button dark">LO QUIERO</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card light">
+          <div class="text-overlay">
+            <h2>PREMIUM</h2>
+            <div class="price">$200.000</div>
+            <div class="details-text">
+              <span>1 HORA</span>
+              <span>Up to 200 projects</span>
+              <span>24/7 support</span>
+              <span>Access to Beta features</span>
+            </div>
+          </div>
+          <div class="purchase-button-container">
+            <h2 class="back-h2">PREMIUM</h2>
+            <span class="iconify" data-icon="noto-v1:drum"></span>
+            <div class="purchase-button light">LO QUIERO</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <!-- CARD END -->
+  <div class="products">
+    <h1>PRODUCTOS</h1>
+    <div class="containerproducts">
+      <div *ngFor="let eachproduct of products" class="card">
+        <div class="face face1">
+          <div class="content2">
+            <img [src]="eachproduct.img">
+            <h3> {{ eachproduct.name }} </h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content2">
+            <p> {{ eachproduct.info }} </p>
+            <h3>Precio: {{ eachproduct.price }} </h3>
+            <a (click)="addToCart(eachproduct)">LO QUIERO</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</section>
+
+<!--  -->

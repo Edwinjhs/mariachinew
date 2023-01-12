@@ -1,0 +1,70 @@
+<section class="fixed-top">
+  <div class="completeHeader">
+    <img src="assets/img/Wave.png" alt="" />
+  </div>
+  <div class="complete">
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <div class="togglediv">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <a class="navbar-brand" href="#"><img src="assets/img/Logo.PNG" alt=""></a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/home" routerLinkActive="active-link" class="nav-link">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/our-plans" routerLinkActive="active-link" class="nav-link">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact" routerLinkActive="active-link" class="nav-link">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/aboutUs" routerLinkActive="active-link" class="nav-link">Sobre Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/galery" routerLinkActive="active-link" class="nav-link">Galeria</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <p class="desple">
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+      <span class="iconify" data-icon="material-symbols:shopping-cart-rounded"></span>
+    </button>
+  </p>
+  <div style="min-height: 100%;">
+    <div class="collapse collapse-horizontal" id="collapseWidthExample">
+      <div class="card card-body" style="width: 100%; height: 100%;" right fixed>
+        <h1>CARRITO DE COMPRAS</h1>
+        <ng-container *ngIf="productstorage.length === 0"> Aun no tienes ningun articulo agregado en tu carrito de compras.></ng-container>
+        <div *ngIf="productstorage.length > 0" class="cartbox">
+          <a (click)="clearData()"><span class="iconify" data-icon="ion:trash-outline" style="color: white;" data-flip="horizontal"></span></a>
+          <div class="myitems" *ngFor="let eachproduct1 of productstorage">
+            <div class="item">
+              <h3>cantidad</h3>
+              <h3>{{ eachproduct1.eachproduct.quantity }} </h3>
+            </div>
+            <div class="item">
+              <h3>{{ eachproduct1.eachproduct.name }}</h3>
+              <img [src]="eachproduct1.eachproduct.img">
+            </div>
+            <div class="item">
+              <h3>precio</h3>
+              <h3>{{ eachproduct1.eachproduct.price }} </h3>
+            </div>
+            <div class="item">
+              <a (click)="DeleteFromCart()"><span class="iconify" data-icon="ion:trash-outline"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img class="logo-desktop" src="assets/img/Logo.PNG" alt="">
+  </div>
+</section>

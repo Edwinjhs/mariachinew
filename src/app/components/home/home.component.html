@@ -1,0 +1,69 @@
+<div class="start">
+  <img src="assets/img/2mariachi.JPG" alt="" >
+
+  <swiper
+    [slidesPerView]="3"
+    [loop]="true"
+    [navigation]="true"
+    [autoplay]="{delay: 3500, disableOnInteraction: false}"
+    [freeMode]="true"
+    [spaceBetween]="5"
+    class="mySwiper">
+    <ng-template swiperSlide><img src="assets/img/boda.png" alt=""></ng-template>
+    <ng-template swiperSlide><img src="assets/img/cumpleaños.png" alt=""></ng-template>
+    <ng-template swiperSlide><img src="assets/img/madre.png" alt=""></ng-template>
+    <ng-template swiperSlide><img src="assets/img/slide1.jpeg" alt=""></ng-template>
+    <ng-template swiperSlide><img src="assets/img/slide2.jpeg" alt=""></ng-template>
+    <ng-template swiperSlide><img src="assets/img/slide3.jpeg" alt=""></ng-template>
+    <ng-template swiperSlide><img src="assets/img/slide4.jpeg" alt=""></ng-template>
+    <ng-template swiperSlide><img src="assets/img/slide5.jpeg" alt=""></ng-template>
+  </swiper>
+  <button routerLink="/our-plans" routerLinkActive="active-link">
+    <span>Conoce Nuestros Planes</span>
+  </button>
+  <div class="diferenciales">
+    <div class="icon-padding">
+      <span class="iconify" data-icon="mdi:alarm-clock-check" style="color: black;"></span>
+      <h2>PUNTUALIDAD</h2>
+    </div>
+    <div class="icon-padding">
+      <span class="iconify" data-icon="mdi:check-decagram" style="color: black;"></span>
+      <h2>CALIDAD</h2>
+    </div>
+    <div class="icon-padding">
+      <span class="iconify" data-icon="foundation:torso-business" style="color: black;"></span>
+      <h2>PROFESIONALISMO</h2>
+    </div>
+  </div>
+  <h1 class="title">Opiniones De Clientes</h1>
+  <swiper [navigation]="true"
+  [loop]="true"
+  class="mySwiper feedback-swiper">
+    <ng-template swiperSlide>
+      <div class="user">
+        <img src="assets/img/pamelafb.jpg" alt="">
+        <div class="user-info">
+          <div class="costumer">
+            <span class="iconify" data-icon="logos:facebook"></span>
+            <h3>PAMELA ALEJANDRA ORTIZ </h3>
+          </div>
+          <div class="stars">
+            <span class="iconify" data-icon="material-symbols:star"></span>
+            <span class="iconify" data-icon="material-symbols:star"></span>
+            <span class="iconify" data-icon="material-symbols:star"></span>
+            <span class="iconify" data-icon="material-symbols:star"></span>
+            <span class="iconify" data-icon="material-symbols:star-half"></span>
+          </div>
+          <p>"Gracias por tan lindos momentos que sigan cosechando alegria, serenatas y exito en sus vidas"</p>
+        </div>
+      </div>
+    </ng-template>
+  </swiper>
+  <button routerLink="/our-plans" routerLinkActive="active-link">
+    <span>Conocer otros productos</span>
+  </button>
+<app-footer></app-footer>
+</div>
+
+
+
