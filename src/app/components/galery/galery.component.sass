@@ -5,11 +5,25 @@
   width: 100%
   background: black
 
-img
+.headerimg
   position: relative
   width: 100%
   margin: 0px
   top: 0
+.imgcontainer
+  display: flex
+  flex-flow: row wrap
+  align-items: center
+  justify-content: center
+  .imgeach
+    display: flex
+    flex-flow: row wrap
+    width: 200px
+    margin: 10px
+    cursor: pointer
+
+    &:hover
+      transform: scale(1.5)
 
 p
   margin: 0
@@ -45,9 +59,6 @@ p
     margin: 0 5px
     width: 100%
     height: 100%
-  img
-    width: 100%
-    height: 100px
 @media screen and (min-width: 572px)
   .mySwiper
     cursor: pointer

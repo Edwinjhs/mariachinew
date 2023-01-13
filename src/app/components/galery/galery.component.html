@@ -1,6 +1,7 @@
 <div class="completeGalery">
-  <img src="assets/img/imgGalery.jpg" alt="">
+  <img class="headerimg" src="assets/img/imgGalery.jpg" alt="">
   <p>Conoce mas de nuestro trabajo</p>
+
   <h1 class="title">VIDEOS</h1>
   `<swiper
     [slidesPerView]="3"
@@ -16,17 +17,22 @@
   </swiper>`,
 
   <h1 class="title">IMAGENES</h1>
-  `<swiper
-    [slidesPerView]="3"
-    [spaceBetween]="30"
-    [freeMode]="true"
-    [loop]="true"
-[navigation]="true"
-    [pagination]="{
-      clickable: true
-    }"
-    class="mySwiper">
-    <ng-template swiperSlide *ngFor="let imagen of imagenes"> <img [src]="imagen.img" controls preload="metadata" ></ng-template>
-  </swiper>`,
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      FILTRAR POR TIPO DE EVENTOS
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" (click)="filtertypes('wedding')"><span class="badge text-bg-primary">BODAS</span></a></li>
+      <li><a class="dropdown-item" (click)="filtertypes('birthday')"><span class="badge text-bg-secondary">CUMPLEAÑOS</span></a></li>
+      <li><a class="dropdown-item" (click)="filtertypes('event')"><span class="badge text-bg-success">EVENTOS</span></a></li>
+      <li><a class="dropdown-item" (click)="filtertypes('parties')"><span class="badge text-bg-danger">FIESTAS</span></a></li>
+      <li><a class="dropdown-item" (click)="showallimg()"><span class="badge text-bg-warning">TODAS</span></a></li>
+    </ul>
+  </div>
+  <div class="imgcontainer">
+    <div  *ngFor="let imagen of imagenes">
+      <img class="imgeach" [src]="imagen.img" alt="">
+    </div>
+  </div>
 <app-footer></app-footer>
 </div>

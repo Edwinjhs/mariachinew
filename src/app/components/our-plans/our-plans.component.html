@@ -1,60 +1,24 @@
 <section class="start">
-  <img class="imgheader" src="../../../assets/img/product.JPG" alt="" />
+  <img class="imgheader" src="assets/img/product.JPG" alt="" />
   <!-- CARD START -->
   <div class="container">
     <h1>PLANES</h1>
-    <div class="card-container">
+    <div *ngFor="let servicio of servicios" class="card-container">
       <div class="card-wrapper">
         <div class="card light">
           <div class="text-overlay">
-            <h2>BASICO</h2>
-            <div class="price">$80.000</div>
+            <h2>{{ servicio.name}}</h2>
+            <div class="price">$ {{servicio.price}}</div>
             <div class="details-text">
-              <span>7 CANCIONES</span>
+              <span> {{servicio.info}} </span>
               <span>Up to 10 projects</span>
               <span>24/7 support</span>
             </div>
           </div>
           <div class="purchase-button-container">
-            <h2 class="back-h2">BASICO</h2>
-            <span class="iconify" data-icon="fxemoji:guitar"></span>            <div class="purchase-button light">LO QUIERO</div>
-          </div>
-        </div>
-      </div>
-      <div class="card-wrapper">
-        <div class="card dark">
-          <div class="text-overlay">
-            <h2>ESTANDAR</h2>
-            <div class="price">$120.000</div>
-            <div class="details-text2">
-              <span>30 MINUTOS</span>
-              <span>Up to 50 projects</span>
-              <span>24/7 support</span>
-            </div>
-          </div>
-          <div class="purchase-button-container">
-            <h2 class="back-h22">ESTANDAR</h2>
-            <span class="iconify" data-icon="emojione:guitar"></span>
-            <div class="purchase-button dark">LO QUIERO</div>
-          </div>
-        </div>
-      </div>
-      <div class="card-wrapper">
-        <div class="card light">
-          <div class="text-overlay">
-            <h2>PREMIUM</h2>
-            <div class="price">$200.000</div>
-            <div class="details-text">
-              <span>1 HORA</span>
-              <span>Up to 200 projects</span>
-              <span>24/7 support</span>
-              <span>Access to Beta features</span>
-            </div>
-          </div>
-          <div class="purchase-button-container">
-            <h2 class="back-h2">PREMIUM</h2>
-            <span class="iconify" data-icon="noto-v1:drum"></span>
-            <div class="purchase-button light">LO QUIERO</div>
+            <h2 class="back-h2"> QUIERO </h2>
+            <img [src]="servicio.img" width="250px" alt="">
+            <div class="purchase-button light"><a (click)="addToCart(servicio)">AGREGAR</a></div>
           </div>
         </div>
       </div>

@@ -33,7 +33,7 @@
     </div>
   </nav>
   <p class="desple">
-    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+    <button (click)="getItemStorage()" id="ejemp" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
       <span class="iconify" data-icon="material-symbols:shopping-cart-rounded"></span>
     </button>
   </p>
@@ -41,27 +41,39 @@
     <div class="collapse collapse-horizontal" id="collapseWidthExample">
       <div class="card card-body" style="width: 100%; height: 100%;" right fixed>
         <h1>CARRITO DE COMPRAS</h1>
-        <ng-container *ngIf="productstorage.length === 0"> Aun no tienes ningun articulo agregado en tu carrito de compras.></ng-container>
+        <ng-container *ngIf="productstorage.length === 0">
+          <p>Aun no tienes ningun articulo agregado en tu carrito de compras.</p>
+          <button class="btnplans" routerLink="/our-plans" routerLinkActive="active-link">
+            <span>Conoce Nuestros Planes</span>
+          </button>
+        </ng-container>
         <div *ngIf="productstorage.length > 0" class="cartbox">
           <a (click)="clearData()"><span class="iconify" data-icon="ion:trash-outline" style="color: white;" data-flip="horizontal"></span></a>
-          <div class="myitems" *ngFor="let eachproduct1 of productstorage">
+          <div class="myitems" *ngFor="let eachproduct1 of productstorage; index as i">
             <div class="item">
               <h3>cantidad</h3>
-              <h3>{{ eachproduct1.eachproduct.quantity }} </h3>
+              <h3>{{ eachproduct1.quantity }} </h3>
             </div>
             <div class="item">
-              <h3>{{ eachproduct1.eachproduct.name }}</h3>
-              <img [src]="eachproduct1.eachproduct.img">
+              <h3>{{ eachproduct1.name }}</h3>
+              <img [src]="eachproduct1.img">
             </div>
             <div class="item">
               <h3>precio</h3>
-              <h3>{{ eachproduct1.eachproduct.price }} </h3>
+              <h3>{{ eachproduct1.price }} </h3>
             </div>
             <div class="item">
-              <a (click)="DeleteFromCart()"><span class="iconify" data-icon="ion:trash-outline"></span></a>
+              <a (click)="DeleteFromCart(i)"><span class="iconify" data-icon="ion:trash-outline"></span></a>
             </div>
           </div>
         </div>
+        <ng-container *ngIf="productstorage.length >= 1">
+          <button (click)="whatsappMsg()" id="ejemp" class="btn btn-whatsapp" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+            <span class="iconify" data-icon="logos:whatsapp-icon"></span>
+            <h1>REALIZAR PEDIDO</h1>
+          </button>
+        </ng-container>
+
       </div>
     </div>
   </div>

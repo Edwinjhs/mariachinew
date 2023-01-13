@@ -12,7 +12,6 @@ import { GaleryComponent } from './components/galery/galery.component';
 import { OurPlansComponent } from './components/our-plans/our-plans.component';
 import { SwiperModule } from "Swiper/angular";
 import SwiperCore, { Autoplay, Pagination, Navigation, FreeMode } from "swiper";
-import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +23,6 @@ import { CartComponent } from './components/cart/cart.component';
     ContactComponent,
     GaleryComponent,
     OurPlansComponent,
-    CartComponent
   ],
   imports: [
     BrowserModule,

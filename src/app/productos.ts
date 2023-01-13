@@ -26,3 +26,30 @@ export const products = [
 
 
 ]
+export const servicios = [
+  {
+    name: "PLAN BASICO",
+    img: "assets/img/planbasico.png",
+    info: '30 MINUTOS',
+    price: '80mil',
+    quantity: 1,
+    id:"1"
+  },
+  {
+    name: "PLAN ESTANDAR",
+    img: "assets/img/planstandar.png",
+    info: '30min',
+    price: '120mil',
+    quantity: 1,
+    id:"2"
+  },
+  {
+    name: "PLAN PREMIUM",
+    img: "assets/img/planpremium.png",
+    info: '1 HORA',
+    price: '200mil',
+    quantity: 1,
+    id:"3"
+  },
+
+]
