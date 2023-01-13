@@ -1,27 +1,49 @@
-# TequilaYSon
+### MARIACHI TEQUILA Y SON
+Design by. Edwin Hernández
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
+<p align=center>
+	<img src="https://i.postimg.cc/Qd93SDRP/A5.png)">
+</p>
 
-## Development server
+- This project was generated with [Angular CLI], bootstrap, Swiper, Npx pagination, LOCALSTORAGE, Styles SASS
+- implements
+--LocalStorage
+--Filter in galery component
+--ShoppingCart 100% funtional with localStorage.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### 7 Components
+  -header:
+  -home
+  -ours-plans
+  -contact
+  -aboutus
+  -galery
+  -footer
 
-## Code scaffolding
+### 2 Services
+- LocalService
+- ProductService
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+------------
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- The design is fully adapted to be used on both mobile and desktop devices.  RESPONSIVO 100%
+- Se enlazo la API  de whatsapp usando el siguiente codigo
+<p align=center>
+	<img src="https://i.postimg.cc/HnccdRrh/code.png">
+</p>
 
-## Running unit tests
+------------
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### LocalStorage
+The keys and the values stored with localStorage are always in the UTF-16 string format, which uses two bytes per character. As with objects, integer keys are automatically converted to strings.
 
-## Running end-to-end tests
+localStorage data is specific to the protocol of the document. In particular, for a site loaded over HTTP (e.g., http://example.com), localStorage returns a different object than localStorage for the corresponding site loaded over HTTPS (e.g., https://example.com).
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+For documents loaded from file: URLs (that is, files opened in the browser directly from the user's local filesystem, rather than being served from a web server) the requirements for localStorage behavior are undefined and may vary among different browsers.
 
-## Further help
+In all current browsers, localStorage seems to return a different object for each file: URL. In other words, each file: URL seems to have its own unique local-storage area. But there are no guarantees about that behavior, so you shouldn't rely on it because, as mentioned above, the requirements for file: URLs remain undefined. So it's possible that browsers may change their file: URL handling for localStorage at any time. In fact some browsers have changed their handling for it over time.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+------------
+### You can FILTER images in the galery for evenet
